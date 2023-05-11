@@ -1,0 +1,126 @@
+.hide{
+    display: none;
+}
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   */
+
+  
+    /* default font */
+    /* font-family: monospace; */
+    /* 
+  }
+  
+  body {
+    background-color: #1de4d0;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+  }
+  
+  p {
+    font-size: 1.3em;
+  }
+  
+  button {
+    outline: none;
+    background-color: rgb(235, 168, 239);
+    font-size: 1.3em;
+    
+  }
+  
+  h1,
+  h2 {
+    color: rgb(255, 255, 168);
+    text-align: center;
+  }
+  
+  li {
+    list-style: none;
+  }
+   */
+  /* outer container section */
+  /* .outer-contaier {
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  } */
+  
+  /* top bar section */
+  
+  /* .top-bar p, .count {
+    float: right;
+  } */
+  
+  /* inner container */
+  /* .inner-container {
+    background: rgba(255, 255, 255, 0.477);
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* header quiz info */
+/*   
+  .quiz-intro,
+  main {
+    display: block;
+    margin-bottom: 30vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #b2abab;
+  }
+  
+  .quiz-intro p {
+    text-align: center;
+  }
+  
+  .quiz-intro button {
+    display: block;
+    margin: 0 auto;
+  } */ 
+  
+  /* main quiz content */
+  
+  /* main { */
+    /* hide the display */
+    /* display: block;
+  } */
+  
+  /* question screen */
+  
+  /* .question-screen {
+    display: block;
+  } */
+  
+  /* quiz done screen */
+  
+  /* .quiz-done-screen {
+    display: block;
+  }
+   */
+  
+  /* highscores section */
+  /* .highscores-screen {
+    display: block;
+    text-align: center;
+  }
+  
+  .highscores-screen ol {
+    max-height: 200px;
+    text-align: center;
+  }
+  .highscores-screen ol:hover {
+    overflow-y: scroll;
+  } */
+
+ 

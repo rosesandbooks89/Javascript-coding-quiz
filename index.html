@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Coding Quiz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+  <body>
+    <!-- main outer div -->
+    <div class="outer-container">
+      <!-- top bar -->
+      <header class="top-bar">
+        <a class='button' href='./highscores.html'>Go to High Scores</a>
+        <p>Timer: <span id="count">0</span></p>
+      </header>
+
+      <!-- inner div -->
+      <main class="inner-container">
+        <!-- part 1 -->
+
+        <!-- main header/quiz introduction -->
+        <div class="quiz-intro" id="start-screen">
+          <h1>Welcome to my quiz</h1>
+          <h2></h2>To get stated with the quiz, start the quiz!h2
+          <button type="button" class= "start-button" id="start-button">Start the Quiz!</button>
+        </div>
+        
+          <!-- part 2 -->
+        
+        <section class="question-section hide" id="quiz-screen">
+            <h1>This is a placeholder title</h1>
+            <div class="button-list">
+
+              
+            </div>
+            <h2 id='result'>Answer Result</h2>
+        </section>
+
+          <!-- part 3 done -->
+
+          <section class="quiz-done hide" id="end-screen">
+            <h1>Well Done! Enter your initials below to submit your high score.</h1>
+            <p>Your final score was:</p>
+            <form>
+                <div>
+                <label for="initials">Enter Initials:</label>
+                <input type="text" id="initials" name="initials">
+                </div>
+                <input type="submit" value="Submit" class='button'>
+            </form>
+        </section>
+          
+        
+      </main>
+    </div>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
