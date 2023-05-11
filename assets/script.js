@@ -4,6 +4,30 @@ var timer;
 var seconds = 10;
 var startScreen = document.querySelector("#start-screen")
 
+const questionsArray = [
+    {
+        title: "What is 1 + 1?",
+        options: ["1", "2", "3", "4"],
+        answer: ["2"]
+    },
+    {
+        title: "What is 2 + 2?",
+        options: ["1", "2", "3", "4"],
+        answer: ["4"]
+    },
+    {
+        title: "What is 3 + 3?",
+        options: ["6", "2", "3", "4"],
+        answer: ["6"]
+    },
+    {
+        title: "What is 4+ 4?",
+        options: ["1", "8", "3", "4"],
+        answer: ["8"]
+    }
+    
+];
+
 
 function startGame() {
   // start timer (local function)
