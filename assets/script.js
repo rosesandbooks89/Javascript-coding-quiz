@@ -8,7 +8,7 @@ var startScreen = document.querySelector("#start-screen");
 const question1 = new Question(
   `How are JavaScript single line comments started?`,
   [`/*`, `<!--`, `//`],
-  2
+  correctAnswer: 2
 );
 const question2 = new Question(
   `Which term(s) were introduced as a preferred replacement to 'var' in ECMA2015?`,
@@ -29,26 +29,6 @@ const question4 = new Question(
     `add(a,b) = {a + b}`,
   ],
   1
-);
-const question5 = new Question(
-  `What value does the following code return? console.log("5" + 1)`,
-  [`// '5 + 1'`, `// 6`, `// NaN`, `// "51"`],
-  3
-);
-const question6 = new Question(
-  `What value does the following code return? console.log("4" - 2)`,
-  [`// NaN`, `// null`, `// 2`, `// "42"`],
-  2
-);
-const question7add = new Question(
-  `What JavaScript feature is responsible for the previous two answers?`,
-  [
-    `Type coercion`,
-    `Type conversion`,
-    `Compiler confusion`,
-    `Compiler collusion`,
-  ],
-  0
 );
 
 function startGame() {
