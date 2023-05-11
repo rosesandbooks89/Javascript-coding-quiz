@@ -2,32 +2,54 @@ var buttonClick = document.getElementById("start-button");
 var count = document.querySelector("#count");
 var timer;
 var seconds = 10;
-var startScreen = document.querySelector("#start-screen")
+var startScreen = document.querySelector("#start-screen");
 
-const questionsArray = [
-    {
-        title: "What is 1 + 1?",
-        options: ["1", "2", "3", "4"],
-        answer: ["2"]
-    },
-    {
-        title: "What is 2 + 2?",
-        options: ["1", "2", "3", "4"],
-        answer: ["4"]
-    },
-    {
-        title: "What is 3 + 3?",
-        options: ["6", "2", "3", "4"],
-        answer: ["6"]
-    },
-    {
-        title: "What is 4+ 4?",
-        options: ["1", "8", "3", "4"],
-        answer: ["8"]
-    }
-    
-];
-
+//questions
+const question1 = new Question(
+  `How are JavaScript single line comments started?`,
+  [`/*`, `<!--`, `//`],
+  2
+);
+const question2 = new Question(
+  `Which term(s) were introduced as a preferred replacement to 'var' in ECMA2015?`,
+  [`'let' and 'const'`, `'break' and 'continue'`, `while`, `switch`],
+  0
+);
+const question3 = new Question(
+  `Which of the following is a JavaScript Event type?`,
+  [`load`, `mouseover`, `keydown`, `all of the above`],
+  3
+);
+const question4 = new Question(
+  `What is the structure of an arrow function expression for binding the function 'add'?`,
+  [
+    `const add = {a,b} => (a + b)`,
+    `const add = (a,b) => {a + b}`,
+    `function add => (a,b) = {a + b}`,
+    `add(a,b) = {a + b}`,
+  ],
+  1
+);
+const question5 = new Question(
+  `What value does the following code return? console.log("5" + 1)`,
+  [`// '5 + 1'`, `// 6`, `// NaN`, `// "51"`],
+  3
+);
+const question6 = new Question(
+  `What value does the following code return? console.log("4" - 2)`,
+  [`// NaN`, `// null`, `// 2`, `// "42"`],
+  2
+);
+const question7add = new Question(
+  `What JavaScript feature is responsible for the previous two answers?`,
+  [
+    `Type coercion`,
+    `Type conversion`,
+    `Compiler confusion`,
+    `Compiler collusion`,
+  ],
+  0
+);
 
 function startGame() {
   // start timer (local function)
@@ -42,8 +64,8 @@ function startGame() {
     }
   }, 1000);
   // diplay first question, to display the question we first need to hide the the start screen then we need to display the quiz-screen
-  startScreen.classList.add('hide')
-  
+  startScreen.classList.add("hide");
+
   //
 }
 
