@@ -2,7 +2,7 @@
 var timer = document.getElementById("timer");
 var introCard = document.getElementById("intro");
 var startButton = document.getElementById("start");
-
+var lastButtons = document.getElementById("lastButtons");
 // var card = document.getElementById("card");
 var question = document.getElementById("question");
 var buttonOne = document.getElementById("buttonOne");
@@ -204,14 +204,20 @@ viewScores.addEventListener("click", function () {
   quizCard.setAttribute("style", "display:none;");
   endScreen.setAttribute("style", "display:none;");
   highscoreCard.removeAttribute("style");
+  lastButtons.removeAttribute("style", "display:none;");
+
+  var userName = JSON.parse(localStorage.getItem("user")) || [];
+  while (userList.firstChild) {
+    userList.firstChild.remove();
+  }
+  userName.forEach(function (item) {
+    var tag = document.createElement("li");
+    tag.innerHTML = item.user + " - " + item.score;
+    userList.appendChild(tag);
+  });
 });
 
 // screen for highScores
-function highScores() {
-  endScreen.setAttribute("style", "display:none;");
-  highscoreCard.removeAttribute("style");
-}
-
 //screen for end of quiz to enter initials
 function quizOver() {
   finalScore = timeLeft;
@@ -220,9 +226,15 @@ function quizOver() {
   score.textContent = "Your final score is " + finalScore;
   return;
 }
+function highScores() {
+  endScreen.setAttribute("style", "display:none;");
+  highscoreCard.removeAttribute("style");
+  lastButtons.removeAttribute("style", "display:none;");
+}
 
-//back button on score board
-//working on getting it working not functional
+
+// // back button on score board
+// // working on getting it working not functional
 // backButton.addEventListener("click", function(){
 //     i = 0
 //     timeLeft = startTime;
@@ -232,8 +244,12 @@ function quizOver() {
 //     introCard.removeAttribute("style");
 // });
 
-//clear button
-//working on getting it working not functional
-// function myFunction() {
-//   document.getElementById("clear").reset();
-// }
+clearButton.addEventListener("click", function() {
+  // Clear localStorage
+  localStorage.removeItem("user");
+
+  // Remove all li elements from userList
+  while (userList.firstChild) {
+    userList.firstChild.remove();
+  }
+});

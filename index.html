@@ -1,64 +1,79 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>JavaScript Coding Quiz</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
     <header>
-      <button id="view-highscores" class="view-highscores">View Highscores</button>
+      <button id="view-highscores" class="view-highscores">
+        View Highscores
+      </button>
       <div id="timer" class="timer"></div>
     </header>
 
     <main>
-        <div id="intro" class="intro">
-          <h1>How well do you know coding?</h1>
-          <p>Answer the following questions before the timer runs out. <br>
-            If you answer wrong, you will lose 10 seconds from your timer.</p>
-            <button id="start" class=" start">Start Quiz</button>
-        </div>
-        
-        <div id="card" class="card" style="display:none;">
-          <h2 id="question">Question Place holder</h2>
-            <ul>
-              <button id="buttonOne">Answer Place Holder</button>
-              <button id="buttonTwo">Answer Place Holder</button>
-              <button id="buttonThree">Answer Place Holder</button>
-              <button id="buttonFour">Answer Place Holder</button> 
-            </ul>
-        </div>
+      <div id="intro" class="intro">
+        <h1>How well do you know coding?</h1>
+        <p>
+          Answer the following questions before the timer runs out. <br />
+          If you answer wrong, you will lose 10 seconds from your timer.
+        </p>
+        <button id="start" class="start">Start Quiz</button>
+      </div>
 
-        <div id="final-card" class="final-card" style="display: none;">
-            <h1>All Done!</h1>
-            <p id="final-score">Final Score</p>
-            <form class="input-group">
-                <label for="initials"><u>Enter your initials:</u></label>
-                <input type="initials" name="initials" id="initials" placeholder="Your initials"/>
-              <button id="submit">Submit</button>
-            </form>
-        </div>
+      <div id="card" class="card" style="display: none">
+        <h2 id="question">Question Place holder</h2>
+        <ul>
+          <button id="buttonOne">Answer Place Holder</button>
+          <button id="buttonTwo">Answer Place Holder</button>
+          <button id="buttonThree">Answer Place Holder</button>
+          <button id="buttonFour">Answer Place Holder</button>
+        </ul>
+      </div>
 
-      <div id="highscores" class="highscores" style="display: none;">
+      <div id="final-card" class="final-card" style="display: none">
+        <h1>All Done!</h1>
+        <p id="final-score">Final Score</p>
+        <form class="input-group">
+          <label for="initials"><u>Enter your initials:</u></label>
+          <input
+            type="initials"
+            name="initials"
+            id="initials"
+            placeholder="Your initials"
+          />
+          <button id="submit">Submit</button>
+        </form>
+      </div>
+
+      <div id="highscores" class="highscores" style="display: none">
         <h2>Highscores</h2>
         <ol id="user-list"></ol>
-        <!-- <span>
-          <button id="back">Go Back</button>
-          <button id="clear">Clear Highscore</button>
-        </span> -->
       </div>
 
-      <div id="correct" class="message" style="display: none;">
-          <h3>That's! 😄</h3>
+      <div id="correct" class="message" style="display: none">
+        <h3>That's! 😄</h3>
       </div>
-      
-      <div id="wrong" class="message" style="display: none;">
+
+      <div id="wrong" class="message" style="display: none">
         <h3>Oops!That's wrong 😞</h3>
-    </div>
+      </div>
+
+      <footer>
+        <div id="lastButtons" class="lastButtons" style="display: none">
+          <span>
+            <a href="javascript:location.reload(true)"
+              ><button id="back">Back to StartScreen</button>
+            </a>
+            <button id="clear">Clear Highscore</button>
+          </span>
+        </div>
+      </footer>
     </main>
 
     <script src="./assets/script.js"></script>
