@@ -1,58 +1,59 @@
-var timer = document.getElementById("timer");
-var introCard = document.getElementById("intro");
-var startButton = document.getElementById("start");
+//variables
+    var timer = document.getElementById("timer");
+    var introCard = document.getElementById("intro");
+    var startButton = document.getElementById("start");
 
 
-// var card = document.getElementById("card");
-var question = document.getElementById("question");
-var buttonOne = document.getElementById("buttonOne");
-var buttonTwo = document.getElementById("buttonTwo");
-var buttonThree = document.getElementById("buttonThree");
-var buttonFour = document.getElementById("buttonFour");
+    // var card = document.getElementById("card");
+    var question = document.getElementById("question");
+    var buttonOne = document.getElementById("buttonOne");
+    var buttonTwo = document.getElementById("buttonTwo");
+    var buttonThree = document.getElementById("buttonThree");
+    var buttonFour = document.getElementById("buttonFour");
 
-var endScreen = document.getElementById("final-card");
-var submitButton = document.getElementById("submit");
-var score = document.getElementById("final-score");
+    var endScreen = document.getElementById("final-card");
+    var submitButton = document.getElementById("submit");
+    var score = document.getElementById("final-score");
 
-// var highScores = document.getElementById("highScores");
-var backButton = document.getElementById("back");
-var clearButton = document.getElementById("clear");
+    // var highScores = document.getElementById("highScores");
+    var backButton = document.getElementById("back");
+    var clearButton = document.getElementById("clear");
 
-var wrongMessage = document.getElementById("wrong");
-var correctMessage = document.getElementById("correct");
+    var wrongMessage = document.getElementById("wrong");
+    var correctMessage = document.getElementById("correct");
 
-//////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////
 
-var initialsInput = document.getElementById("initials");
-var quizCard = document.getElementById("card");
+    var initialsInput = document.getElementById("initials");
+    var quizCard = document.getElementById("card");
 
-var viewScores = document.getElementById("view-highscores");
-var highscoreCard = document.getElementById("highscores");
+    var viewScores = document.getElementById("view-highscores");
+    var highscoreCard = document.getElementById("highscores");
 
-var userList = document.querySelector("#user-list");
+    var userList = document.querySelector("#user-list");
 
-//timer var
-const startTime = 100;
-var timeLeft = startTime;
-var i = 0;
-var finalScore = 0;
-var lastCard = false;
-var time 
+    //timer var
+    const startTime = 100;
+    var timeLeft = startTime;
+    var i = 0;
+    var finalScore = 0;
+    var lastCard = false;
+    var time 
 
-// questions and options
-var arrayQuestion = [
-      "What is the basic markup langauge?",
-      "I need to make a button. What is the correct HTML syntax?",
-      "Which of these is a Javascript library?",
-      "How do I make an entire background blue?"
-  ];
-  var arrayOptionOne = ["Javascript", "<btn></btn>", "MySQL", "color:blue"];
-  var arrayOptionTwo = ["CSS", "<button = button></button?", "Node", "background-color:blue"];
-  var arrayOptionThree = ["C++", "<button></button>", "jQuery", "background-color = blue"];
-  var arrayOptionFour = ["HTML", "<btn = button></btn>", "Python", "color = blue,"];
-// correct answers
-var arrayAnswers = ["HTML", "<button></button>", "jQuery", "background-color:blue"];
-var userAnswer = "";
+    // questions and options
+    var arrayQuestion = [
+          "What is the basic markup langauge?",
+          "I need to make a button. What is the correct HTML syntax?",
+          "Which of these is a Javascript library?",
+          "How do I make an entire background blue?"
+      ];
+      var arrayOptionOne = ["Javascript", "<btn></btn>", "MySQL", "color:blue"];
+      var arrayOptionTwo = ["CSS", "<button = button></button?", "Node", "background-color:blue"];
+      var arrayOptionThree = ["C++", "<button></button>", "jQuery", "background-color = blue"];
+      var arrayOptionFour = ["HTML", "<btn = button></btn>", "Python", "color = blue,"];
+    // correct answers
+    var arrayAnswers = ["HTML", "<button></button>", "jQuery", "background-color:blue"];
+    var userAnswer = "";
 //////////////////////////
 
 // screen for highScores
@@ -201,28 +202,31 @@ submitButton.addEventListener("click", function(event){
   highScores();
 });
 
-//back button on score board
-backButton.addEventListener("click", function(){
-    i = 0
-    timeLeft = startTime;
-    lastCard = false;
-    time.textContent = "Time: " + timeLeft;
-    highscoreCard.setAttribute("style", "display:none;");
-    introCard.removeAttribute("style");
-});
-
-//clear button
-function myFunction() {
-  document.getElementById("clear").reset();
-}
 
 //view highScores
 viewScores.addEventListener("click", function(){ 
-    introCard.setAttribute("style", "display:none;");
-    quizCard.setAttribute("style", "display:none;");
-    endScreen.setAttribute("style", "display:none;");
-    highscoreCard.removeAttribute("style");
+  introCard.setAttribute("style", "display:none;");
+  quizCard.setAttribute("style", "display:none;");
+  endScreen.setAttribute("style", "display:none;");
+  highscoreCard.removeAttribute("style");
 });
 
 // sets inital time on timer on start screen
 timer.textContent = "Time: " + timeLeft;
+
+//back button on score board
+//working on getting it working not functional
+// backButton.addEventListener("click", function(){
+//     i = 0
+//     timeLeft = startTime;
+//     lastCard = false;
+//     time.textContent = "Time: " + timeLeft;
+//     highscoreCard.setAttribute("style", "display:none;");
+//     introCard.removeAttribute("style");
+// });
+
+//clear button 
+//working on getting it working not functional
+// function myFunction() {
+//   document.getElementById("clear").reset();
+// }

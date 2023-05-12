@@ -16,50 +16,48 @@
     </header>
 
     <main>
-      <div id="intro" class="intro">
-        <h1>How well do you know coding?</h1>
-        <p>Answer the following questions before the timer runs out. 
-          If you answer wrong, you will lose 10 seconds from your timer.</p>
-          <button id="start" class=" start">Start Quiz</button>
-      </div>
-      
-      <div id="card" class="card" style="display:none;">
-        <h2 id="question">Question Place holder</h2>
-          <ul>
-            <button id="buttonOne">Answer Place Holder</button>
-            <button id="buttonTwo">Answer Place Holder</button>
-            <button id="buttonThree">Answer Place Holder</button>
-            <button id="buttonFour">Answer Place Holder</button> 
-          </ul>
-      </div>
+        <div id="intro" class="intro">
+          <h1>How well do you know coding?</h1>
+          <p>Answer the following questions before the timer runs out. <br>
+            If you answer wrong, you will lose 10 seconds from your timer.</p>
+            <button id="start" class=" start">Start Quiz</button>
+        </div>
+        
+        <div id="card" class="card" style="display:none;">
+          <h2 id="question">Question Place holder</h2>
+            <ul>
+              <button id="buttonOne">Answer Place Holder</button>
+              <button id="buttonTwo">Answer Place Holder</button>
+              <button id="buttonThree">Answer Place Holder</button>
+              <button id="buttonFour">Answer Place Holder</button> 
+            </ul>
+        </div>
 
-      <div id="final-card" class="final-card" style="display: none;">
-          <h1>All Done!</h1>
-          <p id="final-score">Final Score</p>
-          <form class="input-group">
-            <div>
-              <label for="initials">Enter your initials: </label>
-              <input type="initials" name="initials" id="initials" placeholder="Your initials"/>
-            </div>
-            <button id="submit">Submit</button>
-          </form>
-      </div>
+        <div id="final-card" class="final-card" style="display: none;">
+            <h1>All Done!</h1>
+            <p id="final-score">Final Score</p>
+            <form class="input-group">
+                <label for="initials"><u>Enter your initials:</u></label>
+                <input type="initials" name="initials" id="initials" placeholder="Your initials"/>
+              <button id="submit">Submit</button>
+            </form>
+        </div>
 
       <div id="highscores" class="highscores" style="display: none;">
         <h2>Highscores</h2>
         <ol id="user-list"></ol>
-        <span>
+        <!-- <span>
           <button id="back">Go Back</button>
           <button id="clear">Clear Highscore</button>
-        </span>
+        </span> -->
       </div>
 
       <div id="correct" class="message" style="display: none;">
-          <em>Correct! 😄</em>
+          <h3>That's! 😄</h3>
       </div>
       
       <div id="wrong" class="message" style="display: none;">
-        <em>Oops!That's wrong 😞</em>
+        <h3>Oops!That's wrong 😞</h3>
     </div>
     </main>
 

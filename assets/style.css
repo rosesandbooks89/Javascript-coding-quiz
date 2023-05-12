@@ -1,16 +1,17 @@
 /* Sets root variables so I can easily change these values */
 :root {
-  --dark: #3333339b;
-  --dark-purple: #371a38d1;
+  /* --dark: #3333339b; */
+  --dark-purple: #803c82d1;
   --black: #000000;
-  --dark-teal: #10888c;
+  --dark-teal: #20d2d8;
   --pale-yellow: #ffffa8;
 }
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 15px;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -19,27 +20,31 @@ body {
   color: white;
   font-size: 16px;
   align-items: center;
+  overflow-y: scroll;
 }
 button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1rem;
-  text-decoration: none;
+  margin: auto;
   border-radius: 10px;
-  margin: 0.5rem;
-  border-color: var(--dark-teal);
+  border-color: var(--black);
   background-color: var(--dark-teal);
   border-style: solid;
-  border-width: 2px;
+  border-width: 4px;
+  font-size: larger;
 }
 
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2%;
-  background-color: var(--dark);
+  padding: 0;
+  margin: auto;
+  border: dotted var(--black);
+  width: 400px;
+  height: 120px;
 }
 .timer {
   color: black;
@@ -48,14 +53,83 @@ header {
 
 p {
   font-size: 1.3em;
-}
-
-h1,
-h2 {
   color: var(--pale-yellow);
   text-align: center;
 }
 
-li {
-  list-style: none;
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  margin: auto;
+  border: solid var(--black);
+  width: 600px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+}
+h1, h2 {
+  color: var(--black);
+  text-decoration: underline var(--black);
+  font-size: xx-large;
+  
+}
+/* h2{
+  color: var(--black);
+  text-decoration: underline var(--black);
+} */
+h3 {
+  color: black;
+  font-size: xx-large;
+}
+
+.message{
+  display: flex;
+  justify-content: center;
+}
+
+.final-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: auto;
+  border: dotted var(--black);
+  width: 400px;
+  height: 250px;
+  color: black;
+  font-size: xx-large;
+  
+}
+
+.highscores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#000000;
+  font-weight: bolder;
+  font-size: larger;
+  border: dotted var(--black);
+  width: max-content;
+  overflow-y: scroll;
+  max-height: 400px;
+  margin:auto
+}
+
+.user-list ol {
+  font-weight: bolder;
+  font-size: larger;
+  
 }
