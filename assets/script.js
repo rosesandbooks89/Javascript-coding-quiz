@@ -46,12 +46,12 @@ var arrayQuestion = [
       "Which of these is a Javascript library?",
       "How do I make an entire background blue?"
   ];
-  var arrayOptionOne = ["Javascript", "<btn></btn>", "MySQL", "color:blue;"];
-  var arrayOptionTwo = ["CSS", "<button = button></button?", "Node", "background-color:blue;"];
-  var arrayOptionThree = ["C++", "<button></button>", "jQuery", "background-color = blue;"];
+  var arrayOptionOne = ["Javascript", "<btn></btn>", "MySQL", "color:blue"];
+  var arrayOptionTwo = ["CSS", "<button = button></button?", "Node", "background-color:blue"];
+  var arrayOptionThree = ["C++", "<button></button>", "jQuery", "background-color = blue"];
   var arrayOptionFour = ["HTML", "<btn = button></btn>", "Python", "color = blue,"];
 // correct answers
-var arrayAnswers = ["HTML", "<button></button>", "jQuery", "background-color:blue;"];
+var arrayAnswers = ["HTML", "<button></button>", "jQuery", "background-color:blue"];
 var userAnswer = "";
 //////////////////////////
 
@@ -210,6 +210,11 @@ backButton.addEventListener("click", function(){
     highscoreCard.setAttribute("style", "display:none;");
     introCard.removeAttribute("style");
 });
+
+//clear button
+function myFunction() {
+  document.getElementById("clear").reset();
+}
 
 //view highScores
 viewScores.addEventListener("click", function(){ 
