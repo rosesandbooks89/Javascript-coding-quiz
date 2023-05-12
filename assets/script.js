@@ -2,6 +2,7 @@ var timer = document.getElementById("timer");
 var introCard = document.getElementById("intro");
 var startButton = document.getElementById("start");
 
+
 // var card = document.getElementById("card");
 var question = document.getElementById("question");
 var buttonOne = document.getElementById("buttonOne");
@@ -9,7 +10,7 @@ var buttonTwo = document.getElementById("buttonTwo");
 var buttonThree = document.getElementById("buttonThree");
 var buttonFour = document.getElementById("buttonFour");
 
-var lastCard = document.getElementById("final-card");
+var endScreen = document.getElementById("final-card");
 var submitButton = document.getElementById("submit");
 var score = document.getElementById("final-score");
 
@@ -25,7 +26,7 @@ var correctMessage = document.getElementById("correct");
 var initialsInput = document.getElementById("initials");
 var quizCard = document.getElementById("card");
 
-var viewScores = document.getElementById("view-highScores");
+var viewScores = document.getElementById("view-highscores");
 var highscoreCard = document.getElementById("highscores");
 
 var userList = document.querySelector("#user-list");
@@ -72,7 +73,7 @@ function quizOver(){
 function startTimer(){
     var timerInterval = setInterval(function(){
         timeLeft--;
-        time.textContent = "Time: " + timeLeft;
+        timer.textContent = "Time: " + timeLeft;
 
       if (timeLeft <= 0 || lastCard == true){
         clearInterval(timerInterval);
@@ -219,4 +220,4 @@ viewScores.addEventListener("click", function(){
 });
 
 // sets inital time on timer on start screen
-time.textContent = "Time: " + timeLeft;
+timer.textContent = "Time: " + timeLeft;
