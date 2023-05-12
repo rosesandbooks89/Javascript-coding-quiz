@@ -78,6 +78,19 @@ var userAnswer = "";
 // sets inital time on timer on start screen
 timer.textContent = "Time: " + timeLeft;
 
+//timer start
+function startTimer() {
+  var timerInterval = setInterval(function () {
+    timeLeft--;
+    timer.textContent = "Time: " + timeLeft;
+
+    if (timeLeft <= 0 || lastCard == true) {
+      clearInterval(timerInterval);
+      quizOver();
+    }
+  }, 1000);
+  return;
+}
 //hides intro card
 function startClicked() {
   introCard.setAttribute("style", "display:none;");
@@ -205,19 +218,6 @@ function quizOver() {
   quizCard.setAttribute("style", "display:none;");
   endScreen.removeAttribute("style");
   score.textContent = "Your final score is " + finalScore;
-  return;
-}
-//timer start
-function startTimer() {
-  var timerInterval = setInterval(function () {
-    timeLeft--;
-    timer.textContent = "Time: " + timeLeft;
-
-    if (timeLeft <= 0 || lastCard == true) {
-      clearInterval(timerInterval);
-      quizOver();
-    }
-  }, 1000);
   return;
 }
 
